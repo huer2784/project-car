@@ -22,7 +22,6 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 	
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-		// TODO Auto-generated method stub
 		Optional<AppUser> user = appUserRepository.findByUsername(username);
 		
 		UserBuilder builder = null;
