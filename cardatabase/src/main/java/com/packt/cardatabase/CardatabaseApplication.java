@@ -48,13 +48,6 @@ public class CardatabaseApplication implements CommandLineRunner{
 		carRepository.save(new Car("ford", "mustang", "red", "ADF-1121", 2023, 59000, owner1));
 		carRepository.save(new Car("ford", "leaf", "white", "SSJ-3002", 2024, 69000, owner2));
 		carRepository.save(new Car("ford", "prius", "silver", "KKO-0212", 2025, 79000, owner2));
-//		
-//		List<Car> list = carRepository.findAll();
-		
-//		for(Car car : list) {
-//			logger.info("brand : {}, model : {}, model_year : {}, owner : {}", car.getBrand(), car.getModel(), car.getModelYear(), "");
-//			logger.info("brand : {}, model : {}, model_year : {}, owner : {}", car.getBrand(), car.getModel(), car.getModelYear(), car.getOwner().getFirstname()+car.getOwner().getLastname());
-//		}
 		
 		AppUser user = new AppUser("user", new BCryptPasswordEncoder().encode("user"), "USER");   
 		appUserRepository.save(user);
